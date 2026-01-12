@@ -155,13 +155,22 @@ namespace StoryTool.Editor
         /// </summary>
         private void OnTriggered()
         {
+            // start animation on main thread 
+            EditorApplication.delayCall += StartAnimation;
+        }
+
+        /// <summary>
+        /// Starts the animation
+        /// </summary>
+        private void StartAnimation()
+        {
+            if (_isAnimating || edgeControl == null)
+                return;
+
             _isAnimating = true;
             _phaseOffsetPx = 0f;
             _elapsedTimeSec = 0f;
-            _lastTickTime = Time.realtimeSinceStartup;
-
-            if (edgeControl == null)
-                return;
+            _lastTickTime = Time.realtimeSinceStartup; 
 
             edgeControl.MarkDirtyRepaint();
             _schedule?.Pause();
