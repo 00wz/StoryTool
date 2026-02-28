@@ -2,6 +2,8 @@
 
 **StoryTool** is a powerful Unity tool designed for creating interactive branching narratives. The tool provides a visual graph editor where you can create complex storylines by connecting atomic events.
 
+**[StoryTool on Unity Asset Store](https://assetstore.unity.com/packages/tools/game-toolkits/storytool-354962)**
+
 ## Table of Contents
 
 - [Requirements](#requirements)
